@@ -1,0 +1,56 @@
+#cursorImage {
+    position: absolute;
+    z-index: 1500;
+    width: 27px;
+    height: 27px;
+    background-image: url(../public/cursorImage.png);
+    display: none;
+}
+
+.OpenDialogDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45vh;
+}
+
+.styleButton {
+    color: purple !important;
+    border: 2px solid purple !important;
+    width: 120px; 
+    height: 30px;
+    text-transform: none !important;
+}
+
+.BottomDiv {
+    margin-top: auto;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.marginLeft {
+    margin-left: 5vh !important;
+}
+
+.marginRight {
+    margin-right: 5vh !important;
+}
+
+.marginTop {
+    margin-top: 5vh !important;
+}
+
+.marginBottom {
+    margin-bottom: 5vh !important;
+}
+
+.css-m9glnp-MuiPaper-root-MuiDialog-paper {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
