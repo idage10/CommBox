@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CommBox/static/css/main.0b17f17a.css",
-    "main.js": "/CommBox/static/js/main.c993ea69.js",
-    "static/js/787.762c19e4.chunk.js": "/CommBox/static/js/787.762c19e4.chunk.js",
-    "index.html": "/CommBox/index.html",
-    "main.0b17f17a.css.map": "/CommBox/static/css/main.0b17f17a.css.map",
-    "main.c993ea69.js.map": "/CommBox/static/js/main.c993ea69.js.map",
-    "787.762c19e4.chunk.js.map": "/CommBox/static/js/787.762c19e4.chunk.js.map"
+    "main.css": "/CommBox/commbox-ui/static/css/main.0b17f17a.css",
+    "main.js": "/CommBox/commbox-ui/static/js/main.9505d88b.js",
+    "static/js/787.762c19e4.chunk.js": "/CommBox/commbox-ui/static/js/787.762c19e4.chunk.js",
+    "index.html": "/CommBox/commbox-ui/index.html",
+    "main.0b17f17a.css.map": "/CommBox/commbox-ui/static/css/main.0b17f17a.css.map",
+    "main.9505d88b.js.map": "/CommBox/commbox-ui/static/js/main.9505d88b.js.map",
+    "787.762c19e4.chunk.js.map": "/CommBox/commbox-ui/static/js/787.762c19e4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b17f17a.css",
-    "static/js/main.c993ea69.js"
+    "static/js/main.9505d88b.js"
   ]
 }
