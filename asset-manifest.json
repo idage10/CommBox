@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CommBox/static/css/main.0b17f17a.css",
+    "main.js": "/CommBox/static/js/main.c993ea69.js",
+    "static/js/787.762c19e4.chunk.js": "/CommBox/static/js/787.762c19e4.chunk.js",
+    "index.html": "/CommBox/index.html",
+    "main.0b17f17a.css.map": "/CommBox/static/css/main.0b17f17a.css.map",
+    "main.c993ea69.js.map": "/CommBox/static/js/main.c993ea69.js.map",
+    "787.762c19e4.chunk.js.map": "/CommBox/static/js/787.762c19e4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b17f17a.css",
+    "static/js/main.c993ea69.js"
+  ]
+}
