@@ -50,7 +50,7 @@
     margin-bottom: 5vh !important;
 }
 
-.css-m9glnp-MuiPaper-root-MuiDialog-paper {
+.MuiPaper-root {
     overflow-x: hidden !important;
     overflow-y: hidden !important;
 }
