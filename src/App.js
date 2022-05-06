@@ -133,9 +133,7 @@ class App extends React.Component {
     this.setState({open: true});
     // Initialize mouse tracking data and save mouse starting point
     this.setState({trackingMouse: []}, () => {
-      this.setState({reply: false}, () => {
-        this.setMouseTrackingData(e, false);
-      });
+      this.setState({reply: false});
     });
   };
   
@@ -171,13 +169,18 @@ class App extends React.Component {
     this.setState({dialogFocusOnReplay: false});
     let trackingMouse = this.state.trackingMouse;
 
-    let cursorElement = document.getElementById("cursorImage");
-    cursorElement.style.display = "block";
     document.getElementById("topLeftButtonId").style.pointerEvents = "none";
     document.getElementById("topRightButtonId").style.pointerEvents = "none";
     document.getElementById("bottomLeftButtonId").style.pointerEvents = "none";
     document.getElementById("bottomRightButtonId").style.pointerEvents = "none";
     
+    // There is no mouse move or touch move video to display
+    if (trackingMouse.length <= 0)
+      return;
+    
+    let cursorElement = document.getElementById("cursorImage");
+    cursorElement.style.display = "block";
+
     trackingMouse.forEach((data, i, array) => {
       let delay = Math.abs(Number(data.actionTime) - Number(array[0].actionTime));
         let timeOutId = setTimeout(() => {     
