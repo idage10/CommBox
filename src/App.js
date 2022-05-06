@@ -197,13 +197,16 @@ class App extends React.Component {
         <Button id="OpenDialogButton" className="styleButton" variant="outlined" onClick={this.handleDialogOpen}>
           Open Dialog
         </Button>
-        <Dialog onFocus={this.state.dialogFocusOnReplay ? this.startMouseVideoReplay : null} onMouseMove={this.state.reply ? null : this.handleOnMouseMove}
+        <Dialog
           fullScreen
-          open={this.state.open}
-          onClose={this.handleDialogClose}
           aria-describedby="alert-dialog-slide-description"
           TransitionComponent={Transition}
           keepMounted
+          open={this.state.open}
+          onClose={this.handleDialogClose}
+          onMouseMove={this.state.reply ? null : this.handleOnMouseMove}
+          onTouchMove={this.state.reply ? null : this.handleOnMouseMove}
+          onFocus={this.state.dialogFocusOnReplay ? this.startMouseVideoReplay : null}
         >
           <AppBar sx={{ position: "relative", bgcolor: "black" }}>
             <Toolbar>
