@@ -158,8 +158,10 @@ class App extends React.Component {
     if (this.state.reply)
       return;
 
+    let clientXValue = e._reactName === "onClick" || e._reactName === "onMouseMove" ? e.clientX : e.touches[0].clientX;
+    let clientYValue = e._reactName === "onClick" || e._reactName === "onMouseMove" ? e.clientY : e.touches[0].clientY;
     let elementId = isClickedInDialog ? e.currentTarget.id : "";
-    let trackingData = { clientX: e.clientX, clientY: e.clientY, actionTime: new Date().getTime(), isClickedInDialog: isClickedInDialog, elementId: elementId };
+    let trackingData = { clientX: clientXValue, clientY: clientYValue, actionTime: new Date().getTime(), isClickedInDialog: isClickedInDialog, elementId: elementId };
     this.setState(prevState => ({
       trackingMouse: [ ...prevState.trackingMouse, trackingData]
     }))
