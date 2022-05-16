@@ -3,7 +3,7 @@
     z-index: 1500;
     width: 27px;
     height: 27px;
-    background-image: url(../public/cursorImage.png);
+    background-image: url(../../public/cursorImage.png);
     display: none;
 }
 
@@ -23,7 +23,9 @@
 }
 
 .BottomDiv {
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
 }
 
 .floatLeft {

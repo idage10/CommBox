@@ -1,5 +1,5 @@
 import './App.css';
-import './styles.css';
+import './css/styles.css';
 import * as React from "react";
 import {useState, useEffect, useRef} from "react";
 import Button from "@mui/material/Button";
@@ -10,6 +10,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
+import DialogContent from "./components/DialogContent";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -153,7 +154,6 @@ const App = () => {
 
   const startMouseVideoReplay = () => {
     setDialogFocusOnReplay(false);
-    let trackingMouseData = trackingMouse;
 
     document.getElementById("topLeftButtonId").style.pointerEvents = "none";
     document.getElementById("topRightButtonId").style.pointerEvents = "none";
@@ -161,13 +161,13 @@ const App = () => {
     document.getElementById("bottomRightButtonId").style.pointerEvents = "none";
     
     // There is no mouse move or touch move video to display
-    if (trackingMouseData.length <= 0)
+    if (trackingMouse.length <= 0)
       return;
     
     let cursorElement = document.getElementById("cursorImage");
     cursorElement.style.display = "block";
 
-    trackingMouseData.forEach((data, i, array) => {
+    trackingMouse.forEach((data, i, array) => {
       let delay = Math.abs(Number(data.actionTime) - Number(array[0].actionTime));
         let timeOutId = setTimeout(() => {     
             cursorElement.style.left = data.clientX + "px";
@@ -212,24 +212,9 @@ const App = () => {
             </IconButton>
           </Toolbar>
         </AppBar>
-        <div>
-          <Button id="topLeftButtonId" className="styleButton floatLeft marginTop marginLeft" variant="outlined" type="text" onClick={hanldeTopLeftButtonOnClick}>
-            top left
-          </Button>
-          <Button id="topRightButtonId" className="styleButton floatRight marginTop marginRight" variant="outlined" type="text" onClick={hanldeTopRightButtonOnClick}>
-            top right
-          </Button>
-        </div>
-        <div id="cursorImage"></div>
-        <div className="BottomDiv">
-          <Button id="bottomLeftButtonId" className="styleButton floatLeft marginBottom marginLeft" variant="outlined" type="text" onClick={hanldeBottomLeftButtonOnClick}>
-            bottom left
-          </Button>
-          <Button id="bottomRightButtonId" className="styleButton floatRight marginBottom marginRight" variant="outlined" type="text" onClick={hanldeBottomRightButtonOnClick}>
-            bottom right
-          </Button>
-        </div>
-      </Dialog>
+        <DialogContent onClickTopLeft={hanldeTopLeftButtonOnClick} onClickTopRight={hanldeTopRightButtonOnClick}
+          onClickBottomLeft={hanldeBottomLeftButtonOnClick} onClickBottomRight={hanldeBottomRightButtonOnClick}></DialogContent>
+        </Dialog>
     </div>
   );
 }
